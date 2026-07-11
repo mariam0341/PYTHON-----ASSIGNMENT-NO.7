@@ -1,0 +1,189 @@
+print("************************************************************")
+print("             QUESTION NO.1 ATM MACHINE SYSTEM               ")
+print("************************************************************")
+print("                                                            ")
+account_balance = int(input("Enter Your Account Balance : "))
+withdraw_amount = int(input("Enter Your Withdraw Amount : "))
+if (withdraw_amount > account_balance):
+    print("Insuffient Balance")
+if (withdraw_amount < 500):
+    print("Minimum Withdrawal Is 500")
+else:
+    deduct = account_balance - withdraw_amount  
+    print("Your Remaining Balance : ",deduct)
+if (account_balance > 10000):    
+    print("Premium User")
+else:
+    print("Normal User")
+print(                                                              )
+print("************************************************************")
+print("          QUESTION NO.2 SMART USERNAME VALIDATOR            ")
+print("************************************************************")
+username = input("Enter Your Username : ")    
+lenght = len(username)
+if (lenght <= 8):
+    print("ERROR!, Username length must be greater than or equal to 8")
+    
+elif (" " in username):
+    print("ERROR!, Username should not contain spaces")
+    
+elif not username[0].isupper():
+    print("ERROR!, Username must start with a capital letter")
+    
+elif not any(char.isdigit() for char in username):
+    print("ERROR!, Username must contain at least one number")
+else:   
+    print("Successfully! Your username is perfectly correct")    
+print("                                                                  ") 
+print("******************************************************************")
+print("            QUESTION NO.3 EXAM ELIGIBILITY CHECKER                ")
+print("******************************************************************")
+print("                                                                 ")    
+username = input("Enter Your Name : ")
+attendance_percentage = int(input("Enter Your Attendance Percentage : "))
+fees_status = input("Enter Your Fees Status : ").lower()
+attendance_status = attendance_percentage >= 75
+fees_status = "paid"
+if (attendance_status and fees_status == "paid"):
+    print("Eligible for Exam")
+else:
+    print("You are not Eligible for Examination hall")
+print("                                                                 ")    
+print("*****************************************************************")    
+print("            QUESTION NO.4 PASSWORD SECURITY CHECKER              ")    
+print("*****************************************************************")    
+print("                                                                 ")    
+password = input("Enter Your Password : ")
+lenght = len(password)
+if (lenght <= 8):
+    print("ERROR! Password lenght should be greater than or equal to 8")
+    
+elif ("@" not in password or "#" not in password):
+    print("ERROR! Password must contain '@' or '#'")
+    
+elif (" " in password):
+    print("ERROR! Password should not contain spaces")
+    
+elif not password[0].isupper():  
+    print("ERROR!First character should be uppercase")
+    
+else:    
+    print("Strong Password")   
+print(                                                                       )
+print("*********************************************************************")
+print("          QUESTION NO.5 ONLINE SHOPPING DISCOUNT SYSTEM              ")
+print("*********************************************************************")
+print("                                                                     ")
+customer_name = input("Enter Your Name : ")
+total_bill = int(input("Enter Your Total Bill : "))
+membership_status = input("Do you have Membership? {Yes or No} ").lower()
+
+if (total_bill > 5000 and membership_status == "yes"):
+    print("Congratulations! You got a 20% discount")
+    discount = total_bill * 0.20
+    final_bill = total_bill - discount
+    
+elif (total_bill > 3000):
+    print("Congratulations! You got a 10% discount")
+    discount = total_bill * 0.10 
+    final_bill = total_bill - discount
+    
+else:
+    discount = 0
+    final_bill = total_bill
+    print("No discount applied.")
+
+print("Discount Amount:", discount)
+print("Final Bill to pay:", final_bill)
+print("                                                                      ")
+print("*********************************************************************")
+print("               QUESTION NO.6 EMAIL VERIFICATION SYSTEM               ")
+print("*********************************************************************")
+print("                                                                     ")
+email = input("Enter Your Email : ") 
+
+if not email.endswith("@gmail.com"):
+    print("ERROR! Email must end with @gmail.com")
+
+elif (" " in email):
+    print("ERROR! Email should not contain spaces")
+    
+elif len(email) <= 12:
+    print("ERROR! Email length should be greater than 12")
+
+else:
+    print("Email Verified")
+print("                                                                     ")
+print("*********************************************************************")
+print("                QUESTION NO.7 SMART NUMBER ANALYZER                  ")
+print("*********************************************************************")
+print("                                                                     ")
+num = int(input("Enter Your Number : "))
+if num > 0:
+    print("Positive Number")
+elif num < 0:
+    print("Negative Number")
+else:
+    print("The number is Zero")
+
+if num % 2 == 0:
+    print("Even Number")
+else:
+    print("Odd Number")
+
+if num % 5 == 0:
+    print("Divisible by 5")
+else:
+    print("Not divisible by 5")
+
+if num > 100:
+    print("Large Number")
+print("                                                                     ")
+print("*********************************************************************")
+print("            QUESTION NO.8 TRUTHY AND FALSY LOGIN SYSTEM              ")
+print("*********************************************************************")
+print("                                                                     ")
+username = input("Enter Your Name : ").lower()
+password = input("Enter Your Password : ")
+if (username.strip() and password.strip()):
+    print("Login Attempted")
+elif (username.strip() or password.strip()):
+    print("Fields Cannot Be Empty") 
+    
+reversed_username = username[::-1]
+print("Reversed Username:", reversed_username)
+print("                                                             ")        
+print("*************************************************************")
+print("          QUESTION NO.9 WORD ANALYZER SYSTEM                 ")
+print("*************************************************************")
+print("                                                             ")
+sentence = input("Enter Your Sentence : ")
+if ("Python" in sentence):
+    print("Python Found")
+    
+elif (len(sentence) < 20):
+    print("Long Sentence")
+else:    
+    print("Short Sentence")
+
+new_sentence = sentence.replace("Python" , "JavaScript")
+reversed_sentence = sentence[0:8]
+print("Reversed Username:", reversed_sentence)
+print("                                                                 ")
+print("*****************************************************************")
+print("           QUESTION NO.10 NESTED LOGIN OR ROLE CHECKER             ")
+print("*****************************************************************")
+print("                                                                 ")
+username = input("Enter Your Name : ")
+password = int(input("Enter Your Password : "))
+role = input("Enter Your Role : ").lower()
+
+if (role == "admin"):
+    print("Welcome Admin")
+    
+if (role == "student"):
+    print("Welcome Student")
+    
+else:
+    print("Invalid Role")
+print(                                                                     )
