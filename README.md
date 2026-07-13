@@ -1,4 +1,4 @@
-# 📘 Assignment No. 6 - Python Conditional Statements Assignment
+# 📘 Assignment No. 7 - Python Conditional Statements Assignment
 
 This is my sixth Python assignment, where I practiced Python Conditional Statements and improved my logic building and problem-solving skills through different real-world based problems.
 
